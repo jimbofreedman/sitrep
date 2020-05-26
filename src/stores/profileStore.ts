@@ -12,6 +12,7 @@ export default class ProfileStore {
         id: null,
         attributes: {
             email: null,
+            goals: null,
         }
     };
     @observable error = null;
@@ -22,6 +23,10 @@ export default class ProfileStore {
     }
 
     get loaded(): boolean {
+        return !!this.data.id;
+    }
+
+    get hasData(): boolean {
         return !!this.data.id;
     }
 

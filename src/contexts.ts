@@ -3,6 +3,8 @@ import axios, {AxiosInstance} from 'axios';
 import { ResourceStore } from "@reststate/mobx";
 
 import config from './config'
+import {create} from "domain";
+import ProfileStore from "./stores/profileStore";
 
 console.log('API:', config.apiUrl);
 
@@ -46,5 +48,6 @@ const createHttpClient = () => {
 
 // @ts-ignore
 export default React.createContext({
-    todoItemStore: new ResourceStore({name: "todo-items", httpClient: createHttpClient()})
+    profileStore: new ProfileStore(createHttpClient()),
+    todoItemStore: new ResourceStore({name: "todo-items", httpClient: createHttpClient()}),
 });
