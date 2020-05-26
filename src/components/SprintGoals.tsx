@@ -8,7 +8,7 @@ import TodoItem from "./TodoItem";
 import moment from "moment";
 import Loading from "./Loading";
 
-function TodoItemList() {
+function SprintGoals() {
     const { profileStore } = useStores();
 
     React.useEffect(() => {
@@ -28,4 +28,4 @@ function TodoItemList() {
     );
 }
 
-export default observer(TodoItemList);
+export default observer(SprintGoals);
