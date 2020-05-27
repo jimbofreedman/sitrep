@@ -2,7 +2,7 @@ import React from 'react';
 
 import useStores from "../hooks/useStores";
 import {observer} from "mobx-react";
-import {Grid, Typography, Paper} from '@material-ui/core';
+import {Grid, Typography, Paper, Card, CardContent, CardActions, Avatar} from '@material-ui/core';
 import ReactMarkdown from 'react-markdown';
 import TodoItem from "./TodoItem";
 import moment from "moment";
@@ -23,7 +23,11 @@ function SprintGoals() {
 
     return (
         <Paper>
-            <ReactMarkdown>{profileStore.data.attributes.goals}</ReactMarkdown>
+            <Card>
+                <CardContent>
+                    <ReactMarkdown>{profileStore.data.attributes.goals}</ReactMarkdown>
+                </CardContent>
+            </Card>
         </Paper>
     );
 }
