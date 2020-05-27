@@ -48,8 +48,6 @@ function TodoItem({ item }) {
     const due = item.attributes.due ? moment(item.attributes.due) : null;
     const overdue = due && due < moment();
 
-    console.log('Rendering', item.attributes.title);
-
     return (
         <Card className={classes.root}>
             <div className={classes.details}>

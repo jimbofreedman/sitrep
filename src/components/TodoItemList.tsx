@@ -10,7 +10,6 @@ function TodoItemList() {
     const { todoItemStore } = useStores();
 
     const refresh = () => {
-        console.log("Refreshing")
         todoItemStore.loadAll()
     }
 

@@ -19,7 +19,7 @@ function App() {
                  backgroundColor: "#333333",
              }} >
                 <Grid container spacing={3}>
-                    <Grid item xs={9}>
+                    <Grid item xs={6}>
                         <SprintGoals />
                         <Paper><Typography variant="h1">CHARTS</Typography></Paper>
                         <Paper><Typography variant="h1">CHARTS</Typography></Paper>
@@ -27,9 +27,11 @@ function App() {
                         <Paper><Typography variant="h1">CHARTS</Typography></Paper>
                     </Grid>
                     <Grid item xs={3}>
-                        <Weather />
                         <Paper><Typography variant="h1">APPTS</Typography></Paper>
                         <TodoItemList />
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Weather />
                     </Grid>
                 </Grid>
              </div>
