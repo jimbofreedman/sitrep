@@ -10,23 +10,29 @@ import Weather from "./components/Weather";
 function App() {
      return (
          <div style={{
-             width: "80%",
-             height: "80%"
+             backgroundColor: "#000000",
+             width: "1160px",
+             height: "720px",
+             padding: "60px",
          }} >
-            <Grid container>
-                <Grid item lg={9}>
-                    <SprintGoals />
-                    <Paper><Typography variant="h1">CHARTS</Typography></Paper>
-                    <Paper><Typography variant="h1">CHARTS</Typography></Paper>
-                    <Paper><Typography variant="h1">CHARTS</Typography></Paper>
-                    <Paper><Typography variant="h1">CHARTS</Typography></Paper>
+             <div style={{
+                 backgroundColor: "#333333",
+             }} >
+                <Grid container spacing={3}>
+                    <Grid item xs={9}>
+                        <SprintGoals />
+                        <Paper><Typography variant="h1">CHARTS</Typography></Paper>
+                        <Paper><Typography variant="h1">CHARTS</Typography></Paper>
+                        <Paper><Typography variant="h1">CHARTS</Typography></Paper>
+                        <Paper><Typography variant="h1">CHARTS</Typography></Paper>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Weather />
+                        <Paper><Typography variant="h1">APPTS</Typography></Paper>
+                        <TodoItemList />
+                    </Grid>
                 </Grid>
-                <Grid item lg={3}>
-                    <Weather />
-                    <Paper><Typography variant="h1">APPTS</Typography></Paper>
-                    <TodoItemList />
-                </Grid>
-            </Grid>
+             </div>
          </div>
     );
 }

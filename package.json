@@ -17,6 +17,7 @@
     "@types/react-dom": "^16.9.0",
     "axios": "^0.19.2",
     "dotenv-cli": "^3.1.0",
+    "googleapis": "^51.0.0",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "mobx-react-router": "^4.1.0",
@@ -33,7 +34,7 @@
   "scripts": {
     "start": "dotenv -e .env react-scripts start",
     "build": "dotenv -e .env.prod react-scripts build",
-    "serve": "dotenv -e .env.prod react-scripts build; serve -s build",
+    "deploy": "dotenv -e .env.prod react-scripts build; serve -l 8089 -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix"
